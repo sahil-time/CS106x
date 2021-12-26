@@ -19,7 +19,9 @@ Example:
         return 0;
     }
 
- *Lecture 3 *
+> Although there is a big difference between Pointers and References. If "swap" accepts pointers, it creates pointer variables 'a' and 'b' i.e. allocates space etc. For reference passing as we see here, there is NO space ceated. Check last 4 minutes of - https://www.youtube.com/watch?v=4fJBrditnJU
+
+ *Lecture 3 [ Strings ] *
 
 > C++ has 2 types of Strings:
   - C Strings which are Char arrays
@@ -32,4 +34,49 @@ Example:
 > Do NOT concatenate C Style Strings like
   - string s = "hi" + "there" [ Not allowed ]
 
-* Lecture 4 *
+* Lecture 4 [ Collections - Vectors ]*
+
+> Vectors are like ArrayLists in Java or Lists in Python
+> Its like a Dynamically re-sizing Array that can be of certain Type
+> In Python the same List can store MULTIPLE Types. In Java and C++ we cannot I think
+> Although we can nest Vectors so like
+
+    //each element of vv is a Vector
+    Vector<Vector<int>> vv;
+    //vv has 3 elements all Vectors
+    vv = { {1}, {1,2,3}, {5,6}}
+
+* Lecture 5 [ Collections - Stacks and Queues ] *
+
+> Vectors vs Linked Lists
+ - Think about which data operations are most frequent
+ - Think where we will be adding/removing data, at the end or the middle etc?
+ - Think about cache hits or misses
+ - Bjarne says Vectors are ALWAYS better than LL's [ for any size LOL ]
+
+* Lecture 16 [ Classes ] *
+
+> const is important in Class member functions
+    class TEST {
+    public:
+        void show() const;
+    private:
+        int x;
+    };
+> const is more like a contract [ promise ]
+>   
+
+======= DS [ Any Usage of DS in a project must be thoroughly examined. What data and what kind of Operations, the frequence of those must be studied ]=======
+1. Arrays
+2. Vectors
+3. Linked Lists
+4. Stacks [ ADT ]
+5. Queues [ ADT ]
+6. Sets [ ADT ]
+7. Maps/Dict etc [ ADT ]
+8. Heap
+9. 
+
+
+
+
