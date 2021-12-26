@@ -1,0 +1,35 @@
+* Lecture 2 *
+
+> Reference Semantics or Reference passing is better than Pointers because a lot of Syntax or Syntactical mistakes can be avoided. But if the API implements Reference Semantics, there is no way for the Caller to know if the API modifies the variables or not. This can be an extra point of concern while debugging.
+
+Example:
+
+    //Advantage is no need of & and * as for pointers.
+    void swap(int& a, int& b) {
+        int t = a;
+        a = b;
+        b = t;
+    }
+
+    main() {
+        int x = 5;
+        int y = 10;
+        swap(x, y) //Caller does NOT know if swap takes reference or value. This is bad for debugging
+        cout << x << endl;
+        return 0;
+    }
+
+ *Lecture 3 *
+
+> C++ has 2 types of Strings:
+  - C Strings which are Char arrays
+  - C++ Strings which are objects
+
+> Conversion between C and C++ Strings
+  - C to C++ String -> string("text")
+  - C++ to C String -> string.c_str()
+
+> Do NOT concatenate C Style Strings like
+  - string s = "hi" + "there" [ Not allowed ]
+
+* Lecture 4 *
