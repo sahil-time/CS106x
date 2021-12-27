@@ -70,10 +70,47 @@ In real scenario we can attached it to a Ticket purchasing line, It performs lik
 So it follows completely data structure of Deque.
 """
 
-* Lecture 6 [ Sets and Maps ] *
+* Lecture 6 [ Sets and Maps and Lexicons ] *
 
-> 
+> Set is implemented using a Binary Tree structure [ sorted order, generally a Red-Black ]. In Java its called a TreeSet
+> HashSet is implemented using a Hash Table [ random order ]
 
+If elements need to be in Sorted order use Set, or else use HashSet [ higher performance ]
+
+> If you want to store complex datatype like a Struct in a Set, we need a comparator [ overload the < operator to be specific in C++ to make it Sortable ]
+  Same thing for a HashSet, we need a '==', '!=' and a hashCode function [ 3 things ]
+
+> Lexicons is like a Dictionary [ Set of Strings but it does NOT have definitions LOL ] used for Prefix lookup coz it has a Prefix tree
+
+> Maps is like a Lexicon but STORES definitions. Its a K-V datastore e.g. Phonebook, Dictionary, Social buddy list etc.
+> Set vs HashSet == Maps [ ordered, implements using BST usually Red-Black ]  vs HashMaps [ unordered, implemented using HashTable ]
+> https://stackoverflow.com/questions/2196995/is-there-any-advantage-of-using-map-over-unordered-map-in-case-of-trivial-keys
+
+Code example [ ultra-cool ], lets read a book word by word and store occurences =>
+
+    Map<string, int> counters;
+
+    ...//Read 'word' here
+
+    if(!counters.containsKey(word)) {
+        counters.put(word, 1);
+    } else {
+        int count = counters.get(word);
+        counters.put(word, count + 1);
+    }
+
+   //All the above 6 lines can be replaced by a single line
+   counters[word]++;
+
+LOL
+
+> Get Anagrams of a given word from a Dictionary. How? "HashMap<string, Set<string>> anagrams" where the K = sorted version of any 'word'
+  The idea is that the Sorted version of ALL ANAGRAMS = same, so we use that as the Key to Store and Retrieve
+
+HW: Code a program to check total unique words from a Book, find total occurences of the given word and all anagrams of it.
+Ans: HashSet<string> and get the size, HashMap<string, int> and search on it, HashMap<string, Set<string>> respectively.
+
+* Lecture 7 [ ] *
 
 * Lecture 16 [ Classes ] *
 
@@ -85,6 +122,7 @@ So it follows completely data structure of Deque.
         int x;
     };
 > const is more like a contract [ promise ]
+> https://www.youtube.com/watch?v=4fJBrditnJU&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb&index=34
 
 * Lecture 17 [ Classes ] *
 
