@@ -1,6 +1,7 @@
 * Lecture 2 *
 
-> Reference Semantics or Reference passing is better than Pointers because a lot of Syntax or Syntactical mistakes can be avoided. But if the API implements Reference Semantics, there is no way for the Caller to know if the API modifies the variables or not. This can be an extra point of concern while debugging.
+> Reference Semantics or Reference passing is better than Pointers because a lot of Syntax or Syntactical mistakes can be avoided. But if the API implements Reference 
+  Semantics, there is no way for the Caller to know if the API modifies the variables or not. This can be an extra point of concern while debugging.
 
 Example:
 
@@ -19,7 +20,8 @@ Example:
         return 0;
     }
 
-> Although there is a big difference between Pointers and References. If "swap" accepts pointers, it creates pointer variables 'a' and 'b' i.e. allocates space etc. For reference passing as we see here, there is NO space ceated. Check last 4 minutes of - https://www.youtube.com/watch?v=4fJBrditnJU
+> Although there is a big difference between Pointers and References. If "swap" accepts pointers, it creates pointer variables 'a' and 'b' i.e. allocates space etc. For 
+  reference passing as we see here, there is NO space ceated. Check last 4 minutes of - https://www.youtube.com/watch?v=4fJBrditnJU
 
  *Lecture 3 [ Strings ] *
 
@@ -54,6 +56,25 @@ Example:
  - Think about cache hits or misses
  - Bjarne says Vectors are ALWAYS better than LL's [ for any size LOL ]
 
+> Stacks are generally implemented as Vectors and not LL's in C++
+> Queue is generally implemented as an LL [ dequeuing is faster in LL coz no shifting needed like Vectors unless its a clever Circular vector maybe? ]
+> Deque combines both Stack and Queue. We can add/remove from front and back O(1)
+
+Usage of Deque? [ from StackOverflow ] =>
+
+"""
+A Deque is a double ended queue, allowing inserting and removing from both ends.
+
+In real scenario we can attached it to a Ticket purchasing line, It performs like a queue but some time It happens that some body has purchased the ticket and sudden they come back to ask some thing on front of queue. In this scenario because they have already purchased the ticket so they have privilege to come and ask for any further query. So in these kind of scenario we need a data structure where according to requirement we add data from front. And In same scenario user can also leave the queue from rear.
+
+So it follows completely data structure of Deque.
+"""
+
+* Lecture 6 [ Sets and Maps ] *
+
+> 
+
+
 * Lecture 16 [ Classes ] *
 
 > const is important in Class member functions
@@ -64,7 +85,12 @@ Example:
         int x;
     };
 > const is more like a contract [ promise ]
->   
+
+* Lecture 17 [ Classes ] *
+
+> 'friend' keyword lets an external function access private data in the Object. "If you're a friend you can touch my privates"...
+> Design wise if there is a function that needs to touch the private data, it should BE a part of the Class right? So "friend" is used in special cases where 
+  a function HAS to be written as a Global entity but they are inherently tied to the Class semantically, so it should be allowed to touch the private stuff! 
 
 ======= DS [ Any Usage of DS in a project must be thoroughly examined. What data and what kind of Operations, the frequence of those must be studied ]=======
 1. Arrays
