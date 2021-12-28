@@ -4,7 +4,13 @@
 #include <vector>
 #include <set>
 #include <unordered_set>
+#include <algorithm>
+#include <map>
+#include <unordered_map>
+#include <cctype>
 #include <chrono> //Platform Independent Library. For more accurate timing use platform specific Libs
+
+#define TEXT_FILE "lotr.txt"
 
 using namespace std;
 
@@ -32,7 +38,7 @@ void UNIQUE_WORDS_VECTOR()
 
     vector<string> words;
 
-    ifstream file ("lotr.txt"); string word; while(file >> word) { //Iterate through the whole file
+    ifstream file (TEXT_FILE); string word; while(file >> word) { //Iterate through the whole file
         bool exists = false;
         for(string w : words){
             if(w == word){
@@ -55,7 +61,7 @@ void UNIQUE_WORDS_SET()
 
     set<string> words;
 
-    ifstream file ("lotr.txt"); string word; while(file >> word) {
+    ifstream file (TEXT_FILE); string word; while(file >> word) {
         words.insert(word);
     }
 
@@ -68,15 +74,79 @@ void UNIQUE_WORDS_HASHSET()
 
     unordered_set<string> words; //hashset
 
-    ifstream file ("lotr.txt"); string word; while(file >> word) {
+    ifstream file (TEXT_FILE); string word; while(file >> word) {
         words.insert(word);
     }
 
-    cout<< "UNIQUE_WORDS_HASHSET::Total Unique words = " << words.size() << endl;
+    cout << "UNIQUE_WORDS_HASHSET::Total Unique words = " << words.size() << endl;
+}
+
+void ANAGRAMS_SET(string w)
+{
+    Timer time;
+
+    string input = w;
+    //convert to lower case
+    transform(w.begin(), w.end(), w.begin(),
+              [](unsigned char c){ return tolower(c); });
+    //sort it so it can be the key for the map
+    sort(w.begin(), w.end());
+
+    map<string, set<string>> anagrams;
+
+    ifstream file (TEXT_FILE); string word; while(file >> word) {
+        string key = word;
+        //convert to lowercase
+        transform(key.begin(), key.end(), key.begin(),
+                  [](unsigned char c){ return tolower(c); });
+        sort(key.begin(), key.end());
+        anagrams[key].insert(word); //anagrams[key] returns a "set<string>" so we insert the word there
+    }
+
+    //print the set out
+    cout << "ANAGRAMS_SET::Anagrams of the word '" << input << "' are: " << endl;
+    for(string const& anagram : anagrams[w]) {
+        cout << anagram << endl;
+    }
+
+   cout << "ANAGRAMS_SET::Size of SET is: " << anagrams.size() << endl;
+}
+
+void ANAGRAMS_HASHSET(string w)
+{
+    Timer time;
+
+    string input = w;
+    //convert to lower case
+    transform(w.begin(), w.end(), w.begin(),
+              [](unsigned char c){ return tolower(c); });
+    //sort it so it can be the key for the map
+    sort(w.begin(), w.end());
+
+    unordered_map<string, set<string>> anagrams;
+
+    ifstream file (TEXT_FILE); string word; while(file >> word) {
+        string key = word;
+        //convert to lowercase
+        transform(key.begin(), key.end(), key.begin(),
+                  [](unsigned char c){ return tolower(c); });
+        sort(key.begin(), key.end());
+        anagrams[key].insert(word); //anagrams[key] returns a "set<string>" so we insert the word there
+    }
+
+    //print the set out
+    cout << "ANAGRAMS_HASHSET::Anagrams of the word '" << input << "' are: " << endl;
+    for(string const& anagram : anagrams[w]) {
+        cout << anagram << endl;
+    }
+
+   cout << "ANAGRAMS_HASHSET::Size of HASHSET is: " << anagrams.size() << endl;
 }
 
 int main()
 {
+    string word;
+
     //Total Unique Words - Vector
     UNIQUE_WORDS_VECTOR();
 
@@ -86,16 +156,15 @@ int main()
     //Total Unique words - HashSet [ Ideal ]
     UNIQUE_WORDS_HASHSET();
 
-    //Total occurences of a given word - Vector
-
-    //Total occurences of a given word - Set
-
-    //Total occurences of a given work - HashSet
-
-    //Anagrams of a given word in the book - Vector
+    cout << "Enter a word to check its anagrams in the text file: " << endl;
+    cin >> word;
+    cout << endl;
 
     //Anagrams of a given word in the book - Set
+    ANAGRAMS_SET(word);
 
     //Anagrams of a given word in the book - HashSet [ Ideal ]
+    ANAGRAMS_HASHSET(word);
+
     return 0;
 }
