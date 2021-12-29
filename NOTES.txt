@@ -65,7 +65,9 @@ Usage of Deque? [ from StackOverflow ] =>
 """
 A Deque is a double ended queue, allowing inserting and removing from both ends.
 
-In real scenario we can attached it to a Ticket purchasing line, It performs like a queue but some time It happens that some body has purchased the ticket and sudden they come back to ask some thing on front of queue. In this scenario because they have already purchased the ticket so they have privilege to come and ask for any further query. So in these kind of scenario we need a data structure where according to requirement we add data from front. And In same scenario user can also leave the queue from rear.
+In real scenario we can attached it to a Ticket purchasing line, It performs like a queue but some time It happens that some body has purchased the ticket and sudden they come 
+back to ask some thing on front of queue. In this scenario because they have already purchased the ticket so they have privilege to come and ask for any further query. So in these 
+kind of scenario we need a data structure where according to requirement we add data from front. And In same scenario user can also leave the queue from rear.
 
 So it follows completely data structure of Deque.
 """
@@ -110,7 +112,28 @@ LOL
 HW: Code a program to check total unique words from a Book, find total occurences of the given word and all anagrams of it.
 Ans: HashSet<string> and get the size, HashMap<string, int> and search on it, HashMap<string, Set<string>> respectively.
 
-* Lecture 7 [ ] *
+* Lecture 7 [ Recursion ] *
+
+> Use recursion when to solve a problem, you need to solve a modified or simpler version of the same problem.
+> It generally removes looping constructs, its a computational mechanism that can allow repetition without looping hmm.
+> Recursion is pretty good at reversing things, because it functions as a Stack inherently which is by nature good at reversing things - LIFO
+
+* Lecture 8, 9 [ Recursion, Fractals ] *
+
+* Lecture 10 [ Exhaustive Search ] *
+
+> Exploring every possible combination from a set of values - Exhaustive search. Often implemented recursively.
+> check backtracking.cpp
+
+* Lecture 11 [ Backtracking ] *
+
+> Find solutions by partially solving and abandoning if they are not suitable
+> Generally uses recursion
+> Its a brute force technique
+> Exhaustive Search is a type of Backtracking where ALL solutions are suitable. So we print all of them. In contrast, Backtracking is a form of
+  exhaustive search where we need to discard/abandon some solutions midway.
+
+
 
 * Lecture 16 [ Classes ] *
 
@@ -136,8 +159,8 @@ Ans: HashSet<string> and get the size, HashMap<string, int> and search on it, Ha
 3. Linked Lists
 4. Stacks [ ADT ]
 5. Queues [ ADT ]
-6. Sets [ ADT ]
-7. Maps/Dict etc [ ADT ]
+6. Sets [ ADT ] => Set/TreeSet[Java] and HashSet in C++
+7. Maps/Dict etc [ ADT ] => Map and HashMap in C++
 8. Heap
 9. 
 
