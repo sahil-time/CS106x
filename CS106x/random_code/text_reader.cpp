@@ -12,7 +12,7 @@
 
 #define TEXT_FILE "LOTR.txt"
 
-using namespace std; //Better to use "std::<>" rather than this, because it is good practice
+using namespace std; //Better to use "std::<>" rather than this, because it is good practice!
 
 //Interesting Util Function - Timer
 struct Timer
