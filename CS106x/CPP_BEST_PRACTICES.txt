@@ -1,0 +1,12 @@
+> BEST PRACTICES are "BEST" but in some scenarios they can prove to be bad. For example check this - https://www.youtube.com/watch?v=Kq8m980JEeg
+> CPP Developers insist that C++ != C and therefore do NOT use C level constructs like Unions, strings.h etc. and use CPP libraries. But when you have
+  embedded constraints, all this can bloat your code. C is ALMOST a subset of C++, so C++ gives the option to use C style programming wherever
+  we have strict constraints. So "BEST" Practices are BEST or WORST depending on the case.
+
+================
+================
+
+1. Do NOT use "using namespace std" as this can create future conflicts if different namespaces are imported.
+   https://stackoverflow.com/questions/1452721/why-is-using-namespace-std-considered-bad-practice
+
+2.  

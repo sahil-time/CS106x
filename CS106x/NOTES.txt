@@ -132,8 +132,24 @@ Ans: HashSet<string> and get the size, HashMap<string, int> and search on it, Ha
 > Its a brute force technique
 > Exhaustive Search is a type of Backtracking where ALL solutions are suitable. So we print all of them. In contrast, Backtracking is a form of
   exhaustive search where we need to discard/abandon some solutions midway.
+> So problems that require Filtering for instance, find all numbers that have 'n' digits BUT output only those that add up to K maybe.
 
+> GENERAL ALGO [ Pass a Sub-Problem to the Recursion ]
+- Make a Choice or Take an action - this creates the current STATE of the problem
+- Solve the same problem using this NEW STATE [ Pass the Current State, and instructions on how to go to the next State ]
+- Base case is the case that implements a GOAL, so when the problem reaches a CERTAIN KNOWN STATE, we take some BASE CASE ACTION
+- Use a FOR LOOP ONLY if at a given STATE when we need to make a CHOICE, we have multiple options to choose from, but do NOT traverse
+  or LOOP to get to NEW STATES, GOING TO A NEW STATE MUST BE RECURSIONS JOB
+- Think if Problem has 1 UNIQUE solution or Multiple? Can implement the base case accordingly
 
+* Lecture 13,14 [ Pointers and LL ] *
+
+> Always declare a Pointer as a NULL POINTER. Or else it is super hard to debug bugs.
+
+> A Struct is actually a Class in C++ or any OOP Language. The only difference is that everything inside the Struct is Public.
+> Struct is a feature for the C style programmers and it can also be used as a lightweight Class
+
+> "new" allocates memory on HEAP
 
 * Lecture 16 [ Classes ] *
 

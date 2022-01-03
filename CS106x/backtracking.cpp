@@ -29,10 +29,27 @@ void print_all_permutations_string(const vector<char>& vc, string prefix = "") {
     } else {
         for(int i = 0; i < vc.size(); i++) {
             char ch = vc[i];
-            vector<char> tmp = vc;
+            vector<char> tmp = vc; //Not a good thing to make deep copy of vectors. Change this
             tmp.erase(tmp.begin() + i);
             print_all_permutations_string(tmp, prefix + ch);
         }
+    }
+}
+
+//Copying vectors NOT good
+void find_all_sublists(vector<string> chosen, vector<string> list) {
+    //cout << chosen;
+    if(!list.empty()) {
+        string tmp = list[0];
+        chosen.push_back(tmp);
+        list.erase(list.begin());
+        find_all_sublists(chosen, list); //do a search of all sublists on the chosen
+        chosen.pop_back();
+        find_all_sublists(chosen, list);
+    } else {
+        for (auto c: chosen)
+            cout << c << endl;
+        cout << endl;
     }
 }
 
@@ -54,10 +71,14 @@ int main()
     vector<char> vc(str.begin(), str.end());
     print_all_permutations_string(vc);
     return 0;
-#endif
 
     cout << "Enter the number of times a dice has rolled - ";
     int num_rolls;
     cin >> num_rolls;
     print_all_permutations_N_time_diceRoll(num_rolls);
+
+#endif
+    vector<string> list {"Jane", "Bob", "Matt", "Sara"};
+    vector<string> sublist;
+    find_all_sublists(sublist, list);
 }
