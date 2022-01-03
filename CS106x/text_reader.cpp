@@ -10,7 +10,7 @@
 #include <cctype>
 #include <chrono> //Platform Independent Library. For more accurate timing use platform specific Libs
 
-#define TEXT_FILE "lotr.txt"
+#define TEXT_FILE "LOTR.txt"
 
 using namespace std;
 
