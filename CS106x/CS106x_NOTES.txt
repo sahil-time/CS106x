@@ -1,4 +1,4 @@
-* Lecture 2 *
+			* Lecture 2 *
 
 > Reference Semantics or Reference passing is better than Pointers because a lot of Syntax or Syntactical mistakes can be avoided. But if the API implements Reference 
   Semantics, there is no way for the Caller to know if the API modifies the variables or not. This can be an extra point of concern while debugging.
@@ -23,7 +23,7 @@ Example:
 > Although there is a big difference between Pointers and References. If "swap" accepts pointers, it creates pointer variables 'a' and 'b' i.e. allocates space etc. For 
   reference passing as we see here, there is NO space ceated. Check last 4 minutes of - https://www.youtube.com/watch?v=4fJBrditnJU
 
- *Lecture 3 [ Strings ] *
+			* Lecture 3 [ Strings ] *
 
 > C++ has 2 types of Strings:
   - C Strings which are Char arrays
@@ -36,7 +36,7 @@ Example:
 > Do NOT concatenate C Style Strings like
   - string s = "hi" + "there" [ Not allowed ]
 
-* Lecture 4 [ Collections - Vectors ]*
+			* Lecture 4 [ Collections - Vectors ]*
 
 > Vectors are like ArrayLists in Java or Lists in Python
 > Its like a Dynamically re-sizing Array that can be of certain Type
@@ -48,7 +48,7 @@ Example:
     //vv has 3 elements all Vectors
     vv = { {1}, {1,2,3}, {5,6}}
 
-* Lecture 5 [ Collections - Stacks and Queues ] *
+			* Lecture 5 [ Collections - Stacks and Queues ] *
 
 > Vectors vs Linked Lists
  - Think about which data operations are most frequent
@@ -72,7 +72,7 @@ kind of scenario we need a data structure where according to requirement we add 
 So it follows completely data structure of Deque.
 """
 
-* Lecture 6 [ Sets and Maps and Lexicons ] *
+			* Lecture 6 [ Sets and Maps and Lexicons ] *
 
 > Set is implemented using a Binary Tree structure [ sorted order, generally a Red-Black ]. In Java its called a TreeSet
 > HashSet is implemented using a Hash Table [ random order ]
@@ -112,20 +112,20 @@ LOL
 HW: Code a program to check total unique words from a Book, find total occurences of the given word and all anagrams of it.
 Ans: HashSet<string> and get the size, HashMap<string, int> and search on it, HashMap<string, Set<string>> respectively.
 
-* Lecture 7 [ Recursion ] *
+			* Lecture 7 [ Recursion ] *
 
 > Use recursion when to solve a problem, you need to solve a modified or simpler version of the same problem.
 > It generally removes looping constructs, its a computational mechanism that can allow repetition without looping hmm.
 > Recursion is pretty good at reversing things, because it functions as a Stack inherently which is by nature good at reversing things - LIFO
 
-* Lecture 8, 9 [ Recursion, Fractals ] *
+			* Lecture 8, 9 [ Recursion, Fractals ] *
 
-* Lecture 10 [ Exhaustive Search ] *
+			* Lecture 10 [ Exhaustive Search ] *
 
 > Exploring every possible combination from a set of values - Exhaustive search. Often implemented recursively.
 > check backtracking.cpp
 
-* Lecture 11 [ Backtracking ] *
+			* Lecture 11 [ Backtracking ] *
 
 > Find solutions by partially solving and abandoning if they are not suitable
 > Generally uses recursion
@@ -142,7 +142,7 @@ Ans: HashSet<string> and get the size, HashMap<string, int> and search on it, Ha
   or LOOP to get to NEW STATES, GOING TO A NEW STATE MUST BE RECURSIONS JOB
 - Think if Problem has 1 UNIQUE solution or Multiple? Can implement the base case accordingly
 
-* Lecture 13,14 [ Pointers and LL ] *
+			* Lecture 13,14 [ Pointers and LL ] *
 
 > Always declare a Pointer as a NULL POINTER. Or else it is super hard to debug bugs.
 
@@ -151,7 +151,7 @@ Ans: HashSet<string> and get the size, HashMap<string, int> and search on it, Ha
 
 > "new" allocates memory on HEAP
 
-* Lecture 16 [ Classes ] *
+			* Lecture 16 [ Classes ] *
 
 > const is important in Class member functions
     class TEST {
@@ -163,7 +163,7 @@ Ans: HashSet<string> and get the size, HashMap<string, int> and search on it, Ha
 > const is more like a contract [ promise ]
 > https://www.youtube.com/watch?v=4fJBrditnJU&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb&index=34
 
-* Lecture 17 [ Classes ] *
+			* Lecture 17 [ Classes ] *
 
 > 'friend' keyword lets an external function access private data in the Object. "If you're a friend you can touch my privates"...
 > Design wise if there is a function that needs to touch the private data, it should BE a part of the Class right? So "friend" is used in special cases where 
