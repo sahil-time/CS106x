@@ -2,7 +2,7 @@ class Solution:
     #User Defined
     N = 9
     EMP_STR = " " #Empty String
-    BOARD = [ #make it more user friendly
+    BOARD = [ #make it more user friendly!
 [" ", " ", " ", " ", " ", " ", " ", " ", " "],
 
 [" ", " ", " ", " ", " ", " ", " ", " ", " "],
