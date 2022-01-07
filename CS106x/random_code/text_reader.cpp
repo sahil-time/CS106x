@@ -12,6 +12,66 @@
 
 #define TEXT_FILE "LOTR.txt"
 
+/* UNIT-TEST Results [ Check the time differences between different DS ]
+
+== UT-1
+
+UNIQUE_WORDS_VECTOR::Total Unique words = 21109
+25041.7 milliseconds
+
+UNIQUE_WORDS_SET::Total Unique words = 21109
+401.629 milliseconds
+
+UNIQUE_WORDS_HASHSET::Total Unique words = 21109
+131.386 milliseconds
+
+Enter a word to check its anagrams in the text file: 
+Night
+
+ANAGRAMS_SET::Anagrams of the word 'Night' are: 
+Night
+night
+thing
+ANAGRAMS_SET::Size of SET is: 18913
+559.682 milliseconds
+
+ANAGRAMS_HASHSET::Anagrams of the word 'Night' are: 
+Night
+night
+thing
+ANAGRAMS_HASHSET::Size of HASHSET is: 18913
+236.775 milliseconds
+
+== UT-2
+
+UNIQUE_WORDS_VECTOR::Total Unique words = 21109
+24961 milliseconds
+
+UNIQUE_WORDS_SET::Total Unique words = 21109
+403.94 milliseconds
+
+UNIQUE_WORDS_HASHSET::Total Unique words = 21109
+127.597 milliseconds
+
+Enter a word to check its anagrams in the text file: 
+Night
+
+ANAGRAMS_SET::Anagrams of the word 'Night' are: 
+Night
+night
+thing
+ANAGRAMS_SET::Size of SET is: 18913
+552.607 milliseconds
+
+ANAGRAMS_HASHSET::Anagrams of the word 'Night' are: 
+Night
+night
+thing
+ANAGRAMS_HASHSET::Size of HASHSET is: 18913
+228.021 milliseconds
+
+*/
+
 using namespace std; //Better to use "std::<>" rather than this, because it is good practice!
 
 //Interesting Util Function - Timer
