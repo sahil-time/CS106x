@@ -1,0 +1,10 @@
+=> Type-Punning, fno-strict-aliasing
+	https://www.approxion.com/category/pointers/
+	https://stackoverflow.com/questions/2958633/gcc-strict-aliasing-and-horror-stories
+	https://stefansf.de/post/type-based-alias-analysis/
+	https://www.ibm.com/docs/en/zos/2.2.0?topic=pointers-type-based-aliasing#fntarg_1
+	https://www.mail-archive.com/linux-btrfs@vger.kernel.org/msg01647.html
+	https://lkml.org/lkml/2018/6/5/769
+	- Looks like the only safe way to do Type Punning is Unions or memcpy.
+	- If doing explicit type punning, use the 'fno-strict-aliasing' flag
+	  so that the compiler does NOT implment the C standards in a strict sense
