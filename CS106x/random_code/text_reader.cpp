@@ -141,7 +141,7 @@ void UNIQUE_WORDS_HASHSET()
     cout << "UNIQUE_WORDS_HASHSET::Total Unique words = " << words.size() << endl;
 }
 
-void ANAGRAMS_SET(string w)
+void ANAGRAMS_MAP(string w)
 {
     Timer time;
 
@@ -164,15 +164,15 @@ void ANAGRAMS_SET(string w)
     }
 
     //print the set out
-    cout << "ANAGRAMS_SET::Anagrams of the word '" << input << "' are: " << endl;
+    cout << "ANAGRAMS_MAP::Anagrams of the word '" << input << "' are: " << endl;
     for(string const& anagram : anagrams[w]) {
         cout << anagram << endl;
     }
 
-   cout << "ANAGRAMS_SET::Size of SET is: " << anagrams.size() << endl;
+   cout << "ANAGRAMS_MAP::Size of Map is: " << anagrams.size() << endl;
 }
 
-void ANAGRAMS_HASHSET(string w)
+void ANAGRAMS_UNORDERED_MAP(string w)
 {
     Timer time;
 
@@ -195,12 +195,12 @@ void ANAGRAMS_HASHSET(string w)
     }
 
     //print the set out
-    cout << "ANAGRAMS_HASHSET::Anagrams of the word '" << input << "' are: " << endl;
+    cout << "ANAGRAMS_UNORDERED_MAP::Anagrams of the word '" << input << "' are: " << endl;
     for(string const& anagram : anagrams[w]) {
         cout << anagram << endl;
     }
 
-   cout << "ANAGRAMS_HASHSET::Size of HASHSET is: " << anagrams.size() << endl;
+   cout << "ANAGRAMS_UNORDERED_MAP::Size of Unordered Map is: " << anagrams.size() << endl;
 }
 
 int main()
@@ -220,11 +220,11 @@ int main()
     cin >> word;
     cout << endl;
 
-    //Anagrams of a given word in the book - Set
-    ANAGRAMS_SET(word);
+    //Anagrams of a given word in the book - Map
+    ANAGRAMS_MAP(word);
 
-    //Anagrams of a given word in the book - HashSet [ Ideal ]
-    ANAGRAMS_HASHSET(word);
+    //Anagrams of a given word in the book - HashMap [ Ideal ]
+    ANAGRAMS_UNORDERED_MAP(word);
 
     return 0;
 }

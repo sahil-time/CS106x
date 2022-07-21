@@ -1,0 +1,22 @@
+REFERENCE => https://www.youtube.com/watch?v=r-TLSBdHe1A
+
+How Performance has changed overtime?
+
+> Back in the 80's, the processor clock speed doubled almost every 18 months [ because transistor density doubled ] - Moore's law [ Also why is transistor density proportional to clock speed? ]
+> So since the "speed" of the processor doubled every 18 months, Software folks sipped mojito at a beach for 18 months, then bought new hardware and the old Software ran twice as fast.
+> This was how performance increased for Software systems before the 90's.
+
+> But NOW post the 2000's, Moore's law has ran out its course. Now Performance does NOT double every 18 months, probably will never double.
+> So Chip companies started adding multiple cores for Software folks to make use of Parallel processing using Parallel programs [ BUT they are VERY hard to write and get right ]
+> So now, squeezing out more Performance from a System needs experts.
+> Almost EVERY App Update is about "improved" Performance now days.
+
+Why is Performance hard to make better?
+
+> As opposed to buggy code where we clearly know the problem, Performance is about trying to find out whether a System can run faster than it currently is? So first we need to establish
+  that the System is NOT running at its maximum and then fix the areas that are slowing it down etc etc. The "establish" part is really hard.
+> There are 2 parts to trying to make Performance better:
+	1. Performance Analysis [ how to do it right? ] => 
+	2. Performance Profiling [ how to do it better? ]
+
+

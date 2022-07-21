@@ -1,1 +1,29 @@
 C++ Notes
+
+			* Namespaces in C++ *
+
+> Namespaces are just scopes to prevent name collisions PERIOD.
+> Whenever you create a library or API, ALWAYS put them behind a namespace so that you NEVER have to worry about
+  naming conflicts.
+> C has a convention to deal with this kind of stuff. We know what it is [ basically prepending the names with
+  the component or library prefix ] -
+
+  Component 1 [ ...fwd1/fib ] -
+      fwd1_fib_route_create() 
+
+  Component 2 [ ...fwd2/fib ] -
+      fwd2_fib_route_create() 
+  
+>
+
+			* Stack vs Heap Memory in C++ *
+
+> "new" allocates memory on Heap. Otherwise its generally on Stack. Some operations have "new" internally, so you need
+  to know whether it is heap or stack.
+> The reason it is important to know is because Stack allocation is much faster than Heap. For stack allocation the Stack
+  pointer basically is just updated to a new address. For Heap, OS needs to do a lot of book-keeping and call malloc etc.
+  This is definitely slower than just moving the stack pointer. Also, for languages that do not offer Garbage collection
+  we need to free the memory after use so that we do not have leaks.
+> Also Stack variables are close to each other, so they have Cache locality too. This helps with performance.
+
+ 

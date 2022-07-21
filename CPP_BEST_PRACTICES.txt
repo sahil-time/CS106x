@@ -9,4 +9,15 @@
 1. Do NOT use "using namespace std" as this can create future conflicts if different namespaces are imported.
    https://stackoverflow.com/questions/1452721/why-is-using-namespace-std-considered-bad-practice
 
+   > If we ALWAYS use "std::" its easy to tell whether something is from STD lib or not [ sometimes while debugging
+     it helps to know where a particular symbol is from. If it is from STD, we MIGHT NOT have to debug that path coz
+     its a standard lib used everywhere so that wont be the source of your bug ( although never say never! ) ]
+   > A general rule of thumb is that NAMES of THINGS must TELL US AS MUCH AS POSSIBLE. Unless there is a GOOD reason
+     to HIDE stuff.
+   > Implicit conversions between 2 DIFFERENT namespace's symbols [ same named symbols ] can create silent run-time
+     unexpected behavior. Implicit conversions between 2 different functions is like LPM, the one that is MOST 
+     appropriate according to the compiler is executed [ in case of namespace symbol collisons ]
+     = https://www.youtube.com/watch?v=4NYC-VU-svE
+   > NEVER use a NAMSEPACE in a Public Header file because it can be included ANYWHERE. This can potentially change
+     the behaviour of ANYTHING across translation units!
 2.  

@@ -1,0 +1,26 @@
+> The death of the Preprocessor has been predicted for many years. It is still here
+> It is still the most portable way to generate C and C++ code
+
+> C/C++ Preprocessor works on directives, directives can be any of the following:
+    Include             - #include
+    Error               - #error
+    Compiler Extentions - #pragma, _Pragma 
+    Replace             - #define, #undef, #, ##
+    File or Line info   - #line
+    Conditional         - #if, #ifdef, #ifndef, #else, #elif, #endif etc.
+> Modules is a new directive in C++ 23
+
+> The #define <identifier> <replacement>, the <identifier> MUST be unique to this
+    Translation Unit.
+> Directives do NOT have Scope
+
+> The preprocessor copies the whole "#include" into the .c file. This becomes one
+    translation unit.
+
+> How to view the Preprocessor Output?
+    gcc -Wall -E file.c -o file.i
+
+> 
+
+
+

@@ -1,0 +1,41 @@
+Designing Classes
+
+> What is the root source of all problems in software development? Ans: Change
+> Good software must be adaptable to frequent changes in code! It's called 'soft'ware
+  not 'hard'ware because by definition it must be easy to change! Software is hard
+  to change because of dependencies.
+
+How to design well?
+1. Design for Readability
+    > Spend time to find good names for all entities.
+2. Design for Change and Extension
+    > Resist the urge to put everything in one class. Separate concerns.
+        a. Single-Responsibility Principle - Everything should do just one thing!?
+            SRP is synonymous to separating concerns.
+        b. Open-Closed Principle - Prefer design that simplifies extension by types
+            or operations.
+        c. Don't Repeat Yourself - Reduce duplication.
+
+3. 
+
+
+Breaking Dependencies: The SOLID Principles
+
+> As we mentioned on Line 3, Coupling is the enemy of change, because it can link
+  together things that must change in parallel - The Pragmatic Programmer
+> Dependency is the Key problem in Software Dev at ALL Scales - Kent Beck
+
+5 Principles [ Not limited to OOP ]:
+    1. Single Responsibility Principle: This is hard to define or explain. But what
+        can be explained is Orthogonality. Basically when you design a component make
+        sure that changing others does not warrant a change in your component. This is
+        hard to get right. Loose Coupling between components is highly desired and
+        every functionality that is added in a component must be self contained and
+        not dependent on other components. Elements that have high cohesion must
+        be part of the same component.
+    2. Open Closed Principle: 
+    3. Liskov Substitution Principle:
+    4. Interface Segregation Principle:
+    5. Dependency Inversion Principle:
+
+

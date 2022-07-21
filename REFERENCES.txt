@@ -1,10 +1,29 @@
-=> Type-Punning, fno-strict-aliasing
+=> Type-Punning, fno-strict-aliasing, Strict-Aliasing
+	[ Readings ]
 	https://www.approxion.com/category/pointers/
 	https://stackoverflow.com/questions/2958633/gcc-strict-aliasing-and-horror-stories
 	https://stefansf.de/post/type-based-alias-analysis/
 	https://www.ibm.com/docs/en/zos/2.2.0?topic=pointers-type-based-aliasing#fntarg_1
 	https://www.mail-archive.com/linux-btrfs@vger.kernel.org/msg01647.html
 	https://lkml.org/lkml/2018/6/5/769
+	https://www.cocoawithlove.com/2008/04/using-pointers-to-recast-in-c-is-bad.html
+	[ Videos ]
+	Search "Pun" in CppCon
+	https://www.youtube.com/watch?v=_8vMAkCp0Rc
+	[ Notes ]
 	- Looks like the only safe way to do Type Punning is Unions or memcpy.
 	- If doing explicit type punning, use the 'fno-strict-aliasing' flag
-	  so that the compiler does NOT implment the C standards in a strict sense
+	  so that the compiler does NOT implement the C standards in a strict sense
+
+=> "extern-C", extern C
+    [ Readings ]
+    https://stackoverflow.com/questions/1041866/what-is-the-effect-of-extern-c-in-c?noredirect=1&lq=1
+
+=> Spurious Wakeup, pthread_cond_wait, pthread_call_signal, pthread_cond_broadcast
+    [ Readings ]
+    https://stackoverflow.com/questions/13122406/why-do-we-need-a-condition-check-before-pthread-cond-wait
+    https://stackoverflow.com/questions/8594591/why-does-pthread-cond-wait-have-spurious-wakeups
+
+=> Digital Signatures
+    [ Videos ]
+    https://www.youtube.com/watch?v=JhufU3oolKA&list=PL6TbWIxWsLY3XuAZB4C0_GxrR76TAZOf2&index=3

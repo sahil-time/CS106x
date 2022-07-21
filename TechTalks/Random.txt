@@ -1,0 +1,18 @@
+1. Guido van Rossum: Python | Lex Fridman Podcast #6
+
+=> https://www.youtube.com/watch?v=ghwaIiE3Nd8
+
+=>  Python's motivation was that I wanted something between Shell Scripting and C
+
+=>  One language is never sufficient for all tasks, for obvious reasons. Some codebases
+    might have a certain language and you need to code in that for features or bugs.
+    Some programming languages are just better suited to certain tasks. If you need 
+    to use a new Language should be selected based on the task at hand. Just like
+    Data Structures and Algorithms should be catered to the data they need to operate
+    on. Because if there is a project to be done, the choice of programming language
+    is dependent on a lot of factors. The time it takes to program in that language,
+    the maintainaibility aspect, how useful the libraries are, speed vs memory tradeoffs
+    etc. Choose wisely! Do not program a web page in C language, it can be done but
+    you cannot attract a huge community, also the boilerplate will drive you mad!
+
+=>  

@@ -1,7 +1,10 @@
 Courses -
+0. Concept-References	- Check for the term and find the "best" references
 1. CS106X		- Stanford C++ [ DS in C++ ]
 2. CS107  		- Stanford C/C++ [ Systems concepts in C/C++ ]
 3. Cyrill Stachniss	- C++ language Uni Lec
 4. Cherno		- C++ language with Code Reviews
 5. DevTooling		- Hussein Nasser
 6. Tech-Talks		- CppCon, GoogleTechTalks etc.
+7. MIT 6.S095		- Programming for the Puzzled
+8. MIT 6.172        - Performance Engineering of Software Systems

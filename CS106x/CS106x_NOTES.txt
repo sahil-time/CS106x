@@ -82,7 +82,7 @@ If elements need to be in Sorted order use Set, or else use HashSet [ higher per
 > If you want to store complex datatype like a Struct in a Set, we need a comparator [ overload the < operator to be specific in C++ to make it Sortable ]
   Same thing for a HashSet, we need a '==', '!=' and a hashCode function [ 3 things ]
 
-> Lexicons is like a Dictionary [ Set of Strings but it does NOT have definitions LOL ] used for Prefix lookup coz it has a Prefix tree
+> Lexicons is like a Dictionary [ Set of Strings but it does NOT have definitions [ or values ] LOL ] used for Prefix lookup coz it has a Prefix tree
 
 > Maps is like a Lexicon but STORES definitions. Its a K-V datastore e.g. Phonebook, Dictionary, Social buddy list etc.
 > Set vs HashSet == Maps [ ordered, implements using BST usually Red-Black ]  vs HashMaps [ unordered, implemented using HashTable ]
@@ -136,7 +136,7 @@ Ans: HashSet<string> and get the size, HashMap<string, int> and search on it, Ha
 
 > GENERAL ALGO [ Pass a Sub-Problem to the Recursion ]
 - Make a Choice or Take an action - this creates the current STATE of the problem
-- Solve the same problem using this NEW STATE [ Pass the Current State, and instructions on how to go to the next State ]
+- Solve the same problem using this CURRENT STATE [ Pass the Current State, and instructions on how to go to the next State ]
 - Base case is the case that implements a GOAL, so when the problem reaches a CERTAIN KNOWN STATE, we take some BASE CASE ACTION
 - Use a FOR LOOP ONLY if at a given STATE when we need to make a CHOICE, we have multiple options to choose from, but do NOT traverse
   or LOOP to get to NEW STATES, GOING TO A NEW STATE MUST BE RECURSIONS JOB
@@ -168,6 +168,28 @@ Ans: HashSet<string> and get the size, HashMap<string, int> and search on it, Ha
 > 'friend' keyword lets an external function access private data in the Object. "If you're a friend you can touch my privates"...
 > Design wise if there is a function that needs to touch the private data, it should BE a part of the Class right? So "friend" is used in special cases where 
   a function HAS to be written as a Global entity but they are inherently tied to the Class semantically, so it should be allowed to touch the private stuff! 
+
+			* Lecture 22 [ Graphs ] *
+
+> Binary Tree is ALSO a Graph
+- Directed, Acyclic, Unweighted
+- Node's in degree <= 1 and out degree <= 2
+- There is exactly 1 path from root to every node
+
+> LL is ALSO a Graph
+- Directed, Acyclic, Unweighted
+- Node's in and out degree <= 1
+
+> DFS finds the path BUT it is NOT guaranteed to find the Shortest Path [ Generally Stack is used to store traversed path ]
+> BFS finds the Shortest Path [ Generally uses Queue ]
+> Both use a DS to store Visited Nodes
+
+			* Lecture 23 [ Graphs, DFS, BFS ] *
+
+> Most languages do NOT EVEN try to implement a Graph, it is quite complicated to package into a generic library
+> BFS and DFS do NOT consider Edge Weights [ for some problems we might need edge weights ]
+- * ENTER COMPLEX GRAPH ALGORITHMS *
+- Dijkstra, A* etc.
 
 ======= DS [ Any Usage of DS in a project must be thoroughly examined. What data and what kind of Operations, the frequence of those must be studied ]=======
 1. Arrays

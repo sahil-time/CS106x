@@ -1,0 +1,3 @@
+> The better we name things in our programs, the easier it is for anyone to translate
+  human communication to code.
+> 
